@@ -16,7 +16,7 @@ Se abrirá una terminal de comandos, donde inicialmente se obtendrá el reposito
 git clone https://github.com/jdbarret/Proyecto-generador-primos.git 
 
 # Dirigirse al directorio
-cd Proyecto_final_Distribuidos
+cd Proyecto-generador-primos
 
 # Ahora se ejecutan una serie de comandos, que para mayor facilidad se ejecutan en un script
 
@@ -38,14 +38,20 @@ kubectl get all -n prime-system
 Para crear un request es necesario crear la siguiente petición donde podemos definir la cantidad de números primos
 a generar y los dígitos que deseamos en cada número
 
-"NOTA IMPORTANTE, SI ABRE EL README DESDE GITHUB LOS \ NO SE VISUALIZAN CORRECTAMENTE, DEBE IR DIRECTAMENTE AL ARCHIVO"
+"NOTA IMPORTANTE, SI ABRE EL README DESDE GITHUB LOS \ NO SE VISUALIZAN CORRECTAMENTE, COMPARESE LA IMAGEN COMO DEBE QUEDAR, 
+POR TANTO DEBE IR DIRECTAMENTE AL ARCHIVO YA SEA EN EL EDITOR DE GIT O EN EL IDE CORRESPONDIENTE"
 
-"
+
+<img width="438" height="79" alt="image" src="https://github.com/user-attachments/assets/b6c72b9c-e711-4a5e-ac84-7a9b078de603" />
+
+
+
 RESPONSE=$(curl -s -X POST http://localhost:30080/api/new \
   -H "Content-Type: application/json" \
   -d '{"quantity": 5, "digits": 12}')
 
-"
+  
+
 Luego al enviar esta petición se creará un request_id.
 
 Para extraerlo
