@@ -38,6 +38,8 @@ kubectl get all -n prime-system
 Para crear un request es necesario crear la siguiente petición donde podemos definir la cantidad de números primos
 a generar y los dígitos que deseamos en cada número
 
+"NOTA IMPORTANTE, SI ABRE EL README DESDE GITHUB LOS \ NO SE VISUALIZAN CORRECTAMENTE, DEBE IR DIRECTAMENTE AL ARCHIVO"
+
 RESPONSE=$(curl -s -X POST http://localhost:30080/api/new \
   -H "Content-Type: application/json" \
   -d '{"quantity": 5, "digits": 12}')
